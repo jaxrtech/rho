@@ -33,27 +33,33 @@ export default class TeXEditorExample extends React.Component {
   constructor(props) {
     super(props);
 
-    const compositeDecorator = new CompositeDecorator([
-      specialSymbolDecorator,
-    ]);
+    // const compositeDecorator = new CompositeDecorator([
+    //   specialSymbolDecorator,
+    // ]);
 
     this.state = {
-      editorState: EditorState.createWithContent(content, compositeDecorator),
+      editorState: EditorState.createWithContent(content),
       liveTeXEdits: Map(),
     };
 
     this._blockRenderer = (block) => {
+      // const data = block.getData();
+      // if (data === undefined) return null;
+      //
+      // const tag = data.get('tag');
+      // if (tag === undefined) return null;
+
       if (block.getType() === 'atomic') {
         return {
           component: TeXBlock,
           editable: false,
           props: {
             onStartEdit: (blockKey) => {
-              var {liveTeXEdits} = this.state;
+              const {liveTeXEdits} = this.state;
               this.setState({liveTeXEdits: liveTeXEdits.set(blockKey, true)});
             },
             onFinishEdit: (blockKey, newContentState) => {
-              var {liveTeXEdits} = this.state;
+              const {liveTeXEdits} = this.state;
               this.setState({
                 liveTeXEdits: liveTeXEdits.remove(blockKey),
                 editorState:EditorState.createWithContent(newContentState),
@@ -63,6 +69,7 @@ export default class TeXEditorExample extends React.Component {
           },
         };
       }
+
       return null;
     };
 
@@ -91,21 +98,23 @@ export default class TeXEditorExample extends React.Component {
         const content = state1.getCurrentContent();
         const selection = state1.getSelection();
 
-        let result = "";
+        let result = "=> ";
 
         try {
           let x = eval(text);
-          if (x !== undefined) {
-            result = x.toString();
+          if (x === undefined) {
+            result += "(none)";
+          } else {
+            result += x.toString();
           }
         } catch(err) {
-          result = "error: failed to evaluate (" + err.message + ")";
+          result += "error: failed to evaluate (" + err.message + ")";
         }
 
         const newContent = Modifier.insertText(content, selection, result);
-        const endState = EditorState.push(state1, newContent);
+        const state2 = EditorState.push(state1, newContent);
 
-        this._onChange(endState);
+        this._onChange(state2);
         return 'handled';
       }
 
@@ -113,24 +122,29 @@ export default class TeXEditorExample extends React.Component {
         const content = editorState.getCurrentContent();
         const selection = editorState.getSelection();
         const newContent = Modifier.insertText(content, selection, "\u22EE");
-        const newState = EditorState.push(editorState, newContent);
+        const state1 = EditorState.push(editorState, newContent);
 
-        // Check of special symbol regex
-        // const SPECIAL_SYMBOL_REGEX = /\u22EE(\w+)\u22EE/g;
-        // const initialContent = newState.getCurrentContent();
-        // const matches = findWithRegex(SPECIAL_SYMBOL_REGEX, initialContent);
-        // const stateWithEntities = matches.reduce((content, x) => {
-        //   const code = x.matches[1];
-        //   const selection = editorState.getSelection(); // TODO
-        //   const entity = Entity.create('SPECIAL_SYMBOL', 'IMMUTABLE', {code})
-        //   return Modifier.applyEntity(content, null)
-        // }, initialContent);
+        const key = state1.getSelection().getFocusKey();
+        const text = state1.getCurrentContent().getBlockForKey(key).getText();
 
-        this._onChange(newState); // TODO
+        const SPECIAL_SYMBOL_REGEX = /\u22EE([\{\}.]+)\u22EE/g;
+        const matches = findWithRegex(SPECIAL_SYMBOL_REGEX, text);
+        console.log(matches);
+
+        if (matches.length === 0) {
+          this._onChange(state1);
+          return 'handled';
+        }
+
+        const match = matches[0];
+        const tex = match.matches[1];
+        const endState = insertTeXBlock(state1, tex);
+
+        this._onChange(endState);
         return 'handled';
       }
 
-      var newState = RichUtils.handleKeyCommand(editorState, command);
+      const newState = RichUtils.handleKeyCommand(editorState, command);
       if (newState) {
         this._onChange(newState);
         return true;
@@ -152,6 +166,16 @@ export default class TeXEditorExample extends React.Component {
         editorState: insertTeXBlock(this.state.editorState),
       });
     };
+
+    const blockRenderMap = Map({
+      'unstyled': {
+        element: 'span'
+      }
+    });
+
+    // Include 'paragraph' as a valid block and updated the unstyled element but
+    // keep support for other draft default block types
+    this._blockRenderMap = Draft.DefaultDraftBlockRenderMap.merge(blockRenderMap);
   }
 
   /**
@@ -165,20 +189,18 @@ export default class TeXEditorExample extends React.Component {
           <div className="TeXEditor-editor" onClick={this._focus}>
             <Editor
               blockRendererFn={this._blockRenderer}
+              blockRenderMap={this._blockRenderMap}
               editorState={this.state.editorState}
               handleKeyCommand={this._handleKeyCommand}
               keyBindingFn={myKeyBindingFn}
               onChange={this._onChange}
-              placeholder="Start a document..."
+              placeholder="Type an expression. Press CTRL-Enter to evaluate..."
               readOnly={this.state.liveTeXEdits.count()}
               ref="editor"
               spellCheck={false}
             />
           </div>
         </div>
-        <button onClick={this._insertTeX} className="TeXEditor-insert">
-          {'Insert new TeX'}
-        </button>
       </div>
     );
   }

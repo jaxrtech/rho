@@ -14,9 +14,12 @@
 
 'use strict';
 
+import {Map} from 'immutable';
+
 import {
   AtomicBlockUtils,
   EditorState,
+  Modifier
 } from 'draft-js';
 
 let count = 0;
@@ -35,13 +38,17 @@ const examples = [
   '{1+\\frac{e^{-8\\pi}} {1+\\ldots} } } }',
 ];
 
-export function insertTeXBlock(editorState) {
+export function insertTeXBlock(editorState, tex) {
+  if (typeof tex === 'undefined') {
+    const nextFormula = count++ % examples.length;
+    tex = examples[nextFormula];
+  }
+
   const contentState = editorState.getCurrentContent();
-  const nextFormula = count++ % examples.length;
   const contentStateWithEntity = contentState.createEntity(
     'TOKEN',
     'IMMUTABLE',
-    {content: examples[nextFormula]},
+    {content: tex},
   );
   const entityKey = contentStateWithEntity.getLastCreatedEntityKey();
   const newEditorState = EditorState.set(

@@ -16,7 +16,7 @@ export default class KatexOutput extends React.Component {
       katex.render(
         this.props.content,
         this.refs.container,
-        {displayMode: false}
+        {displayMode: true}
       );
     }, 0);
   }
@@ -37,10 +37,11 @@ export default class KatexOutput extends React.Component {
   }
 
   render() {
-    return <div style={style} ref="container" onClick={this.props.onClick} />;
+    return <div style={style} ref="container" />;
   }
 }
 
 const style = {
   display: 'inline'
 };
+

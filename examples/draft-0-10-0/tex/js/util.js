@@ -1,6 +1,5 @@
 
-export function findWithRegex(regex, contentBlock) {
-  const text = contentBlock.getText();
+export function findWithRegex(regex, text) {
   let matches, start;
   let results = [];
   while ((matches = regex.exec(text)) !== null) {

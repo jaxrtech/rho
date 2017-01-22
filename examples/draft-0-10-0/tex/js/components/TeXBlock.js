@@ -23,34 +23,6 @@ export default class TeXBlock extends React.Component {
     super(props);
     this.state = {editMode: false};
 
-    this._onClick = () => {
-      if (this.state.editMode) {
-        return;
-      }
-
-      this.setState({
-        editMode: true,
-        texValue: this._getValue(),
-      }, () => {
-        this._startEdit();
-      });
-    };
-
-    this._onValueChange = evt => {
-      var value = evt.target.value;
-      var invalid = false;
-      try {
-        katex.__parse(value);
-      } catch (e) {
-        invalid = true;
-      } finally {
-        this.setState({
-          invalidTeX: invalid,
-          texValue: value,
-        });
-      }
-    };
-
     this._save = () => {
       var entityKey = this.props.block.getEntityAt(0);
       var newContentState = this.props.contentState.mergeEntityData(entityKey, {content: this.state.texValue});
@@ -101,40 +73,10 @@ export default class TeXBlock extends React.Component {
       className += ' TeXEditor-activeTeX';
     }
 
-    var editPanel = null;
-    if (this.state.editMode) {
-      var buttonClass = 'TeXEditor-saveButton';
-      if (this.state.invalidTeX) {
-        buttonClass += ' TeXEditor-invalidButton';
-      }
-
-      editPanel =
-        <div className="TeXEditor-panel">
-          <textarea
-            className="TeXEditor-texValue"
-            onChange={this._onValueChange}
-            ref="textarea"
-            value={this.state.texValue}
-          />
-          <div className="TeXEditor-buttons">
-            <button
-              className={buttonClass}
-              disabled={this.state.invalidTeX}
-              onClick={this._save}>
-              {this.state.invalidTeX ? 'Invalid TeX' : 'Done'}
-            </button>
-            <button className="TeXEditor-removeButton" onClick={this._remove}>
-              Remove
-            </button>
-          </div>
-        </div>;
-    }
-
     return (
-      <div className={className}>
+      <span className={className}>
         <KatexOutput content={texContent} onClick={this._onClick} />
-        {editPanel}
-      </div>
+      </span>
     );
   }
 }

@@ -14,29 +14,25 @@
 
 import {convertFromRaw} from 'draft-js';
 
-var rawContent = {
+const rawContent = {
   blocks: [
     {
-      text: 'This is a Draft-based editor that supports TeX rendering.',
+      text: 'rho\n\n' +
+        'a basic programming environment with TeX rendering and basic expression evaluation\n' +
+        'future goal: powerful and expressive but more intuitive than Mathematica\n\n',
       type: 'unstyled',
+    },
+    {
+      text: ' ',
+      type: 'atomic',
+      entityRanges: [{offset: 0, length: 1, key: 'integral'}],
     },
     {
       text: '',
       type: 'unstyled',
     },
     {
-      text: (
-        'Each TeX block below is represented as a DraftEntity object and ' +
-        'rendered using Khan Academy\'s KaTeX library.'
-      ),
-      type: 'unstyled',
-    },
-    {
-      text: '',
-      type: 'unstyled',
-    },
-    {
-      text: 'Click any TeX block to edit.',
+      text: '1+2\n=> 3',
       type: 'unstyled',
     },
     {
@@ -44,13 +40,16 @@ var rawContent = {
       type: 'atomic',
       entityRanges: [{offset: 0, length: 1, key: 'first'}],
     },
-    {
-      text: 'You can also insert a new TeX block at the cursor location.',
-      type: 'unstyled',
-    },
   ],
 
   entityMap: {
+    integral: {
+      type: 'TOKEN',
+      mutability: 'IMMUTABLE',
+      data: {
+        content: "\\int"
+      }
+    },
     first: {
       type: 'TOKEN',
       mutability: 'IMMUTABLE',
@@ -65,4 +64,4 @@ var rawContent = {
   },
 };
 
-export var content = convertFromRaw(rawContent);
+export const content = convertFromRaw(rawContent);
