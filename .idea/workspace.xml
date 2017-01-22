@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2fa9640a-3ded-4c02-b039-4d6b0f399693" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/Cell.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/override.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/KatexOutput.js" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/KatexOutput.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXBlock.js" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXBlock.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXEditorExample.js" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXEditorExample.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/data/content.js" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/data/content.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/modifiers/insertTeXBlock.js" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/modifiers/insertTeXBlock.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/util.js" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/util.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/TeXEditor.css" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/TeXEditor.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.html" afterPath="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.html" />
     </list>
@@ -30,11 +23,11 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="TeXEditorExample.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="TeXEditorExample.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXEditorExample.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-783">
-              <caret line="110" column="18" lean-forward="false" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
+            <state relative-caret-position="234">
+              <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
               <folding>
                 <element signature="e#701#730#0" expanded="true" />
               </folding>
@@ -45,18 +38,58 @@
       <file leaf-file-name="TeXEditor.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/TeXEditor.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+            <state relative-caret-position="75">
+              <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="util.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/util.js">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+            <state relative-caret-position="330">
+              <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/package.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="255">
+              <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/app.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="315">
+              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="content.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/data/content.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="25" column="92" lean-forward="false" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="92" />
               <folding />
             </state>
           </provider>
@@ -74,41 +107,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.html">
+      <file leaf-file-name="removeTeXBlock.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/modifiers/removeTeXBlock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="override.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/override.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/app.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="24" column="2" lean-forward="true" selection-start-line="24" selection-start-column="2" selection-end-line="24" selection-end-column="2" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="content.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/data/content.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -117,21 +120,11 @@
       <file leaf-file-name="TeXBlock.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXBlock.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
+            <state relative-caret-position="190">
               <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
               <folding>
                 <element signature="e#701#727#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="KatexOutput.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/KatexOutput.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="457">
-              <caret line="47" column="0" lean-forward="true" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -170,14 +163,14 @@
         <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXBlock.js" />
         <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.css" />
         <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/override.css" />
-        <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.html" />
-        <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/TeXEditor.css" />
         <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/KatexOutput.js" />
         <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/Cell.js" />
         <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/util.js" />
         <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/modifiers/insertTeXBlock.js" />
-        <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXEditorExample.js" />
+        <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/TeXEditor.css" />
         <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/data/content.js" />
+        <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.html" />
+        <option value="$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXEditorExample.js" />
       </list>
     </option>
   </component>
@@ -668,12 +661,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1485063493011</updated>
-      <workItem from="1485063496315" duration="25304000" />
+      <workItem from="1485063496315" duration="30307000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25304000" />
+    <option name="totallyTimeSpent" value="30307000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="886" extended-state="6" />
@@ -809,14 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/server.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="40" column="21" lean-forward="true" selection-start-line="40" selection-start-column="21" selection-end-line="40" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tweet/tweet.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -845,14 +830,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="353">
           <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/key_bindings/myKeyBindingFn.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
           <folding />
         </state>
       </provider>
@@ -897,26 +874,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/modifiers/removeTeXBlock.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-188">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/eslint/lib/rules/no-octal.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
           <caret line="22" column="4" lean-forward="false" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/decorators/specialSymbol.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="37">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
           <folding />
         </state>
       </provider>
@@ -937,13 +898,53 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/util.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/override.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/decorators/specialSymbol.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/key_bindings/myKeyBindingFn.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="30" lean-forward="false" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXBlock.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
+        <state relative-caret-position="190">
           <caret line="31" column="20" lean-forward="true" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
           <folding>
             <element signature="e#701#727#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/modifiers/removeTeXBlock.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -957,14 +958,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/util.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="16" lean-forward="false" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -973,45 +966,53 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXEditorExample.js">
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/package.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-783">
-          <caret line="110" column="18" lean-forward="false" selection-start-line="110" selection-start-column="18" selection-end-line="110" selection-end-column="18" />
-          <folding>
-            <element signature="e#701#730#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/override.css">
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" lean-forward="false" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        <state relative-caret-position="330">
+          <caret line="37" column="3" lean-forward="true" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/TeXEditor.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="38" column="4" lean-forward="false" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
+        <state relative-caret-position="75">
+          <caret line="5" column="1" lean-forward="true" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/data/content.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+        <state relative-caret-position="150">
+          <caret line="25" column="92" lean-forward="false" selection-start-line="25" selection-start-column="92" selection-end-line="25" selection-end-column="92" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="0" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/examples/draft-0-10-0/tex/js/components/TeXEditorExample.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="51" column="30" lean-forward="false" selection-start-line="51" selection-start-column="30" selection-end-line="51" selection-end-column="30" />
+          <folding>
+            <element signature="e#701#730#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

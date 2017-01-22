@@ -127,7 +127,7 @@ export default class TeXEditorExample extends React.Component {
         const key = state1.getSelection().getFocusKey();
         const text = state1.getCurrentContent().getBlockForKey(key).getText();
 
-        const SPECIAL_SYMBOL_REGEX = /\u22EE([\{\}.]+)\u22EE/g;
+        const SPECIAL_SYMBOL_REGEX = /\u22EE((?:.|\s)*)\u22EE/g;
         const matches = findWithRegex(SPECIAL_SYMBOL_REGEX, text);
         console.log(matches);
 
