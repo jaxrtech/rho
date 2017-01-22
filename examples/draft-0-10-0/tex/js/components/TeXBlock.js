@@ -16,46 +16,7 @@
 
 import katex from 'katex';
 import React from 'react';
-
-class KatexOutput extends React.Component {
-  constructor(props) {
-    super(props);
-    this._timer = null;
-  }
-
-  _update() {
-    if (this._timer) {
-      clearTimeout(this._timer);
-    }
-
-    this._timer = setTimeout(() => {
-      katex.render(
-        this.props.content,
-        this.refs.container,
-        {displayMode: true}
-      );
-    }, 0);
-  }
-
-  componentDidMount() {
-    this._update();
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (nextProps.content !== this.props.content) {
-      this._update();
-    }
-  }
-
-  componentWillUnmount() {
-    clearTimeout(this._timer);
-    this._timer = null;
-  }
-
-  render() {
-    return <div ref="container" onClick={this.props.onClick} />;
-  }
-}
+import KatexOutput from './KatexOutput';
 
 export default class TeXBlock extends React.Component {
   constructor(props) {
@@ -101,13 +62,19 @@ export default class TeXBlock extends React.Component {
     };
 
     this._remove = () => {
-      this.props.blockProps.onRemove(this.props.block.getKey());
+      const key = this.props.block.getKey();
+      console.log({remove: key});
+      this.props.blockProps.onRemove(key);
     };
     this._startEdit = () => {
-      this.props.blockProps.onStartEdit(this.props.block.getKey());
+      const key = this.props.block.getKey();
+      console.log({startEdit: key});
+      this.props.blockProps.onStartEdit(key);
     };
     this._finishEdit = (newContentState) => {
-      this.props.blockProps.onFinishEdit(this.props.block.getKey(), newContentState);
+      const key = this.props.block.getKey();
+      console.log({finishEdit: key, newContentState});
+      this.props.blockProps.onFinishEdit(key, newContentState);
     };
   }
 

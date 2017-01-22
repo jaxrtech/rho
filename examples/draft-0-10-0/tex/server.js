@@ -20,7 +20,7 @@ import WebpackDevServer from 'webpack-dev-server';
 const APP_PORT = 3000;
 
 // Serve the TeX Editor app
-var compiler = webpack({
+let compiler = webpack({
   entry: path.resolve(__dirname, 'js', 'app.js'),
   module: {
     loaders: [
@@ -36,10 +36,11 @@ var compiler = webpack({
   },
   output: {filename: 'app.js', path: '/'},
 });
-var app = new WebpackDevServer(compiler, {
+let app = new WebpackDevServer(compiler, {
   contentBase: '/public/',
   publicPath: '/js/',
   stats: {colors: true},
+  devtool: 'inline-source-map',
 });
 // Serve static resources
 app.use('/', express.static('public'));
